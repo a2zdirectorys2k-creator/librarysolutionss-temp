@@ -11,46 +11,42 @@
       font-family: "Segoe UI", Arial, sans-serif;
       background: #ffffff;
       color: #222;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
     }
 
-    .container {
-      max-width: 960px;
-      padding: 30px 20px 50px;
-    }
-
-    h1 {
-      font-size: 32px;
-      margin: 10px 0;
-      letter-spacing: 0.5px;
+    .wrapper {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
     .upgrade-tag {
       display: inline-block;
       background: #0b5ed7;
       color: #fff;
-      padding: 8px 20px;
+      padding: 8px 22px;
       font-weight: bold;
       border-radius: 4px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
-    video {
-      max-width: 100%;
-      height: auto;
-      margin: 30px 0;
-      border-radius: 10px;
+    .layout {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .left { flex: 1.1; }
+    .right { flex: 0.9; text-align: center; }
+
+    h1 {
+      font-size: 34px;
+      margin: 10px 0;
     }
 
     p {
       font-size: 17px;
       color: #555;
       line-height: 1.7;
-      margin: 10px 0;
     }
 
     .contact {
@@ -60,85 +56,132 @@
     }
 
     .email {
-      margin-top: 5px;
       color: #0b5ed7;
+      margin-top: 6px;
     }
 
     .services-title {
-      margin-top: 40px;
+      margin-top: 30px;
       font-size: 22px;
       font-weight: 600;
     }
 
+    /* SERVICE TABS */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
+      gap: 14px;
+      margin-top: 18px;
     }
 
     .service {
-      background: #f5f7fa;
       padding: 14px;
-      border-radius: 6px;
+      border-radius: 8px;
       font-weight: 600;
       font-size: 15px;
+      text-align: center;
+      color: #ffffff;
+      cursor: default;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .service:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    }
+
+    /* INDIVIDUAL COLORS */
+    .c1 { background: #0d6efd; }
+    .c2 { background: #198754; }
+    .c3 { background: #fd7e14; }
+    .c4 { background: #6f42c1; }
+    .c5 { background: #d63384; }
+    .c6 { background: #dc3545; }
+    .c7 { background: #20c997; }
+    .c8 { background: #0dcaf0; }
+    .c9 { background: #6610f2; }
+    .c10 { background: #795548; }
+    .c11 { background: #343a40; }
+
+    video {
+      max-width: 100%;
+      border-radius: 12px;
     }
 
     .footer {
       margin-top: 50px;
       font-size: 14px;
       color: #888;
+      text-align: center;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .service:hover {
+        transform: none;
+        box-shadow: none;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <div class="wrapper">
 
     <div class="upgrade-tag">WE ARE UPGRADING NOW</div>
 
-    <h1>Library Solutionss</h1>
+    <div class="layout">
 
-    <p>
-      A2Z Complete Solutions for Colleges & Educational Libraries.
-      <br />
-      We are currently enhancing our digital platform to deliver
-      smarter systems, automation, and advanced services.
-    </p>
+      <!-- LEFT CONTENT -->
+      <div class="left">
+        <h1>Library Solutionss</h1>
 
-    <!-- Animation -->
-    <video autoplay loop muted playsinline>
-      <source src="maintenance.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+        <p>
+          A2Z Complete Solutions for Colleges & Educational Libraries.<br>
+          We are enhancing our digital platform to deliver smarter systems,
+          automation, and advanced services.
+        </p>
 
-    <!-- Contact -->
-    <div class="contact">
-      📞 Mobile:
-      97861 91761 / 74489 17655 / 63801 10292
-      <div class="email">
-        ✉ quotation.librarysolutionss@gmail.com
+        <div class="contact">
+          📞 Mobile: 97861 91761 / 74489 17655 / 63801 10292
+          <div class="email">
+            ✉ quotation.librarysolutionss@gmail.com
+          </div>
+        </div>
+
+        <div class="services-title">Our Core Services</div>
+
+        <div class="services">
+          <div class="service c1">Research Journals</div>
+          <div class="service c2">Journal Subscriptions</div>
+          <div class="service c3">Books Supply</div>
+          <div class="service c4">Journal Publishing</div>
+          <div class="service c5">Magazine Distribution</div>
+          <div class="service c6">Research Patent Services</div>
+          <div class="service c7">Copyright Services</div>
+          <div class="service c8">Library Software Solutions</div>
+          <div class="service c9">Library Automation Systems</div>
+          <div class="service c10">Library Fixtures & Furniture</div>
+          <div class="service c11">Librarians’ Job Portal</div>
+        </div>
       </div>
-    </div>
 
-    <!-- Services -->
-    <div class="services-title">
-      Our Core Services
-    </div>
+      <!-- RIGHT VIDEO -->
+      <div class="right">
+        <video autoplay loop muted playsinline>
+          <source src="maintenance.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
-    <div class="services">
-      <div class="service">Research Journals</div>
-      <div class="service">Journal Subscriptions</div>
-      <div class="service">Books Supply</div>
-      <div class="service">Journal Publishing</div>
-      <div class="service">Magazine Distribution</div>
-      <div class="service">Research Patent Services</div>
-      <div class="service">Copyright Services</div>
-      <div class="service">Library Software Solutions</div>
-      <div class="service">Library Automation Systems</div>
-      <div class="service">Library Fixtures & Furniture</div>
-      <div class="service">Librarians’ Job Portal</div>
     </div>
 
     <div class="footer">
