@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Library Solutionss | Under Upgradation</title>
+  <title>Library Solutionss | Upgrading</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
@@ -14,36 +14,79 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
     }
 
     .container {
-      max-width: 720px;
-      padding: 20px;
+      max-width: 960px;
+      padding: 30px 20px 50px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 10px 0;
+      letter-spacing: 0.5px;
+    }
+
+    .upgrade-tag {
+      display: inline-block;
+      background: #0b5ed7;
+      color: #fff;
+      padding: 8px 20px;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-bottom: 20px;
     }
 
     video {
       max-width: 100%;
       height: auto;
-      margin-bottom: 30px;
-      border-radius: 8px;
-    }
-
-    h1 {
-      font-size: 30px;
-      margin-bottom: 12px;
-      letter-spacing: 0.5px;
+      margin: 30px 0;
+      border-radius: 10px;
     }
 
     p {
       font-size: 17px;
       color: #555;
-      line-height: 1.6;
+      line-height: 1.7;
+      margin: 10px 0;
     }
 
-    .tagline {
-      margin-top: 22px;
+    .contact {
+      margin: 25px 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .email {
+      margin-top: 5px;
+      color: #0b5ed7;
+    }
+
+    .services-title {
+      margin-top: 40px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .service {
+      background: #f5f7fa;
+      padding: 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .footer {
+      margin-top: 50px;
       font-size: 14px;
       color: #888;
     }
@@ -53,22 +96,52 @@
 <body>
   <div class="container">
 
-    <!-- Maintenance Animation -->
+    <div class="upgrade-tag">WE ARE UPGRADING NOW</div>
+
+    <h1>Library Solutionss</h1>
+
+    <p>
+      A2Z Complete Solutions for Colleges & Educational Libraries.
+      <br />
+      We are currently enhancing our digital platform to deliver
+      smarter systems, automation, and advanced services.
+    </p>
+
+    <!-- Animation -->
     <video autoplay loop muted playsinline>
       <source src="maintenance.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
-    <h1>Library Solutionss</h1>
+    <!-- Contact -->
+    <div class="contact">
+      📞 Mobile:
+      97861 91761 / 74489 17655 / 63801 10292
+      <div class="email">
+        ✉ quotation.librarysolutionss@gmail.com
+      </div>
+    </div>
 
-    <p>
-      Our website is currently <strong>under upgradation</strong>.<br />
-      We are enhancing our digital platform to serve you better with
-      improved systems, automation, and services.<br /><br />
-      Please check back shortly.
-    </p>
+    <!-- Services -->
+    <div class="services-title">
+      Our Core Services
+    </div>
 
-    <div class="tagline">
+    <div class="services">
+      <div class="service">Research Journals</div>
+      <div class="service">Journal Subscriptions</div>
+      <div class="service">Books Supply</div>
+      <div class="service">Journal Publishing</div>
+      <div class="service">Magazine Distribution</div>
+      <div class="service">Research Patent Services</div>
+      <div class="service">Copyright Services</div>
+      <div class="service">Library Software Solutions</div>
+      <div class="service">Library Automation Systems</div>
+      <div class="service">Library Fixtures & Furniture</div>
+      <div class="service">Librarians’ Job Portal</div>
+    </div>
+
+    <div class="footer">
       © Library Solutionss · Platform Upgrade in Progress
     </div>
 
