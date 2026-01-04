@@ -5,6 +5,15 @@
   <title>Library Solutionss | Upgrading</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- GOOGLE ANALYTICS (Replace ID later if needed) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
   <style>
     body {
       margin: 0;
@@ -14,44 +23,65 @@
     }
 
     .wrapper {
-      max-width: 1200px;
+      max-width: 1250px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 30px 20px 50px;
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      width: 90px;
+      height: auto;
+    }
+
+    .title-img {
+      max-width: 360px;
+      height: auto;
+    }
+
+    .subline {
+      width: 100%;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 8px;
     }
 
     .upgrade-tag {
+      margin-top: 18px;
       display: inline-block;
       background: #0b5ed7;
       color: #fff;
-      padding: 8px 22px;
+      padding: 10px 26px;
       font-weight: bold;
-      border-radius: 4px;
-      margin-bottom: 25px;
+      font-size: 18px;
     }
 
+    /* MAIN LAYOUT */
     .layout {
       display: flex;
       gap: 40px;
-      align-items: center;
+      margin-top: 35px;
+      align-items: flex-start;
     }
 
     .left { flex: 1.1; }
     .right { flex: 0.9; text-align: center; }
 
-    h1 {
-      font-size: 34px;
-      margin: 10px 0;
-    }
-
     p {
       font-size: 17px;
-      color: #555;
       line-height: 1.7;
+      color: #555;
     }
 
     .contact {
-      margin: 25px 0;
-      font-size: 16px;
+      margin: 20px 0;
       font-weight: 600;
     }
 
@@ -60,16 +90,16 @@
       margin-top: 6px;
     }
 
+    /* SERVICES */
     .services-title {
-      margin-top: 30px;
+      margin-top: 25px;
       font-size: 22px;
       font-weight: 600;
     }
 
-    /* SERVICE TABS */
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 14px;
       margin-top: 18px;
     }
@@ -78,11 +108,9 @@
       padding: 14px;
       border-radius: 8px;
       font-weight: 600;
-      font-size: 15px;
       text-align: center;
-      color: #ffffff;
-      cursor: default;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      color: #fff;
+      transition: transform .25s ease, box-shadow .25s ease;
     }
 
     .service:hover {
@@ -90,104 +118,156 @@
       box-shadow: 0 10px 22px rgba(0,0,0,0.18);
     }
 
-    /* INDIVIDUAL COLORS */
-    .c1 { background: #0d6efd; }
-    .c2 { background: #198754; }
-    .c3 { background: #fd7e14; }
-    .c4 { background: #6f42c1; }
-    .c5 { background: #d63384; }
-    .c6 { background: #dc3545; }
-    .c7 { background: #20c997; }
-    .c8 { background: #0dcaf0; }
-    .c9 { background: #6610f2; }
-    .c10 { background: #795548; }
-    .c11 { background: #343a40; }
+    .c1{background:#0d6efd}
+    .c2{background:#198754}
+    .c3{background:#fd7e14}
+    .c4{background:#6f42c1}
+    .c5{background:#d63384}
+    .c6{background:#dc3545}
+    .c7{background:#20c997}
+    .c8{background:#0dcaf0}
+    .c9{background:#6610f2}
+    .c10{background:#795548}
+    .c11{background:#343a40}
+
+    /* CONTACT FORM */
+    .form-box {
+      margin-top: 35px;
+      padding: 22px;
+      border-radius: 10px;
+      background: linear-gradient(135deg,#0b5ed7,#6610f2);
+      color: #fff;
+      max-width: 520px;
+    }
+
+    .form-box h3 {
+      margin-top: 0;
+    }
+
+    .form-box input,
+    .form-box select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+
+    .form-box button {
+      background: #fff;
+      color: #0b5ed7;
+      border: none;
+      padding: 12px 22px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
 
     video {
       max-width: 100%;
       border-radius: 12px;
     }
 
+    /* FOOTER */
     .footer {
-      margin-top: 50px;
-      font-size: 14px;
-      color: #888;
+      margin-top: 60px;
       text-align: center;
+      font-size: 14px;
+      color: #666;
     }
 
     /* MOBILE */
-    @media (max-width: 900px) {
-      .layout {
-        flex-direction: column;
-      }
-
-      h1 {
-        font-size: 28px;
-      }
-
-      .service:hover {
-        transform: none;
-        box-shadow: none;
-      }
+    @media(max-width:900px){
+      .layout{flex-direction:column}
+      .header{justify-content:center;text-align:center}
+      .subline{text-align:center}
+      .service:hover{transform:none;box-shadow:none}
     }
   </style>
 </head>
 
 <body>
-  <div class="wrapper">
+<div class="wrapper">
 
-    <div class="upgrade-tag">WE ARE UPGRADING NOW</div>
+  <!-- HEADER -->
+  <div class="header">
+    <img src="ls-logo.jpg" class="logo" alt="Library Solutionss Logo">
+    <img src="ls-title.jpg" class="title-img" alt="Library SolutionSS">
+    <div class="subline">An Unit of A2Z Group Companies</div>
+  </div>
 
-    <div class="layout">
+  <div class="upgrade-tag">WE ARE UPGRADING NOW</div>
 
-      <!-- LEFT CONTENT -->
-      <div class="left">
-        <h1>Library Solutionss</h1>
+  <!-- MAIN -->
+  <div class="layout">
 
-        <p>
-          A2Z Complete Solutions for Colleges & Educational Libraries.<br>
-          We are enhancing our digital platform to deliver smarter systems,
-          automation, and advanced services.
-        </p>
+    <div class="left">
+      <p>
+        A2Z Complete Solutions for Colleges & Educational Libraries.
+        We are enhancing our digital platform to deliver smarter systems,
+        automation, and advanced services.
+      </p>
 
-        <div class="contact">
-          📞 Mobile: 97861 91761 / 74489 17655 / 63801 10292
-          <div class="email">
-            ✉ quotation.librarysolutionss@gmail.com
-          </div>
-        </div>
-
-        <div class="services-title">Our Core Services</div>
-
-        <div class="services">
-          <div class="service c1">Research Journals</div>
-          <div class="service c2">Journal Subscriptions</div>
-          <div class="service c3">Books Supply</div>
-          <div class="service c4">Journal Publishing</div>
-          <div class="service c5">Magazine Distribution</div>
-          <div class="service c6">Research Patent Services</div>
-          <div class="service c7">Copyright Services</div>
-          <div class="service c8">Library Software Solutions</div>
-          <div class="service c9">Library Automation Systems</div>
-          <div class="service c10">Library Fixtures & Furniture</div>
-          <div class="service c11">Librarians’ Job Portal</div>
-        </div>
+      <div class="contact">
+        📞 Mobile: 97861 91761 / 74489 17655 / 63801 10292
+        <div class="email">✉ quotation.librarysolutionss@gmail.com</div>
       </div>
 
-      <!-- RIGHT VIDEO -->
-      <div class="right">
-        <video autoplay loop muted playsinline>
-          <source src="maintenance.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <div class="services-title">Our Core Services</div>
+
+      <div class="services">
+        <div class="service c1">Research Journals</div>
+        <div class="service c2">Journal Subscriptions</div>
+        <div class="service c3">Books Supply</div>
+        <div class="service c4">Journal Publishing</div>
+        <div class="service c5">Magazine Distribution</div>
+        <div class="service c6">Research Patent Services</div>
+        <div class="service c7">Copyright Services</div>
+        <div class="service c8">Library Software Solutions</div>
+        <div class="service c9">Library Automation Systems</div>
+        <div class="service c10">Library Fixtures & Furniture</div>
+        <div class="service c11">Librarians’ Job Portal</div>
       </div>
 
+      <!-- FORM -->
+      <div class="form-box">
+        <h3>Request a Call Back</h3>
+        <form action="https://formsubmit.co/quotation.librarysolutionss@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="LS Website Enquiry">
+          <input type="hidden" name="_next" value="https://a2zdirectorys2k-creator.github.io/librarysolutionss-temp/">
+
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="tel" name="mobile" placeholder="Your Mobile Number" required>
+
+          <select name="callback" required>
+            <option value="">Do you want a call back?</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+
+          <button type="submit">Submit Request</button>
+        </form>
+      </div>
     </div>
 
-    <div class="footer">
-      © Library Solutionss · Platform Upgrade in Progress
+    <div class="right">
+      <video autoplay loop muted playsinline>
+        <source src="maintenance.mp4" type="video/mp4">
+      </video>
     </div>
 
   </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © Library Solutionss · Platform Upgrade in Progress<br>
+    Designed by <strong>ZERO-INFOTECH</strong> – An Unit of A2Z Group Companies
+  </div>
+
+</div>
 </body>
 </html>
